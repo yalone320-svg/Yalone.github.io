@@ -70,26 +70,24 @@
             border-bottom: 1px solid #f0f0f0;
             padding-bottom: 10px;
         }
-        /* 教育背景 */
+        /* 教育背景（最终调整版：学校+专业同一行居中） */
         .edu-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
-        }
-        .edu-school {
-            font-size: 16px;
-            color: #222;
-        }
-        .edu-major {
-            text-align: center;
-            font-size: 16px;
-            color: #222;
             margin-bottom: 15px;
+        }
+        .edu-info {
+            text-align: center; /* 学校+专业整体居中 */
+            font-size: 16px;
+            color: #222;
+            flex: 1; /* 占满中间空间，确保居中 */
         }
         .edu-time {
             font-size: 14px;
             color: #888;
+            white-space: nowrap; /* 防止时间换行 */
+            margin-left: 20px; /* 与学校专业保持间距 */
         }
         .course-list {
             display: flex;
@@ -182,134 +180,146 @@
             .name {
                 font-size: 28px;
             }
+            /* 移动端教育背景适配 */
+            .edu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .edu-info {
+                text-align: left;
+                flex: none;
+            }
+            .edu-time {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
-<main class="resume-container">
-    <!-- 头部信息 -->
-    <header class="header">
-        <img src="ymy.jpg" alt="易梦园个人照片" class="avatar" onerror="this.src='https://via.placeholder.com/140x180?text=头像';">
-        <h1 class="name">易梦园</h1>
-        <div class="contact">出生年月：2003年8月 | 手机：13110235632</div>
-        <div class="contact">邮箱：2640414241@qq.com</div>
-        <div class="job-intention">求职意向：数据分析师</div>
-    </header>
+    <main class="resume-container">
+        <!-- 头部信息 -->
+        <header class="header">
+            <img src="ymy.jpg" alt="易梦园个人照片" class="avatar" onerror="this.src='https://via.placeholder.com/140x180?text=头像';">
+            <h1 class="name">易梦园</h1>
+            <div class="contact">出生年月：2003年8月 | 手机：13110235632</div>
+            <div class="contact">邮箱：2640414241@qq.com</div>
+            <div class="job-intention">求职意向：数据分析师</div>
+        </header>
 
-    <!-- 教育背景 -->
-    <section class="section">
-        <h2 class="section-title">教育背景</h2>
-        <div class="edu-item">
-            <div class="edu-school">重庆科技大学</div>
-            <div class="edu-time">2022.09 - 2026.06</div>
-        </div>
-        <div class="edu-major">数据科学与大数据技术</div>
-        <div>主修课程：</div>
-        <div class="course-list">
-            <span class="course-tag">Hadoop大数据技术</span>
-            <span class="course-tag">分布式数据库原理</span>
-            <span class="course-tag">数据库原理与应用</span>
-            <span class="course-tag">计算机网络B</span>
-            <span class="course-tag">算法与数据结构</span>
-            <span class="course-tag">Python程序开发语言</span>
-        </div>
-    </section>
-
-    <!-- 实习经历 -->
-    <section class="section">
-        <h2 class="section-title">实习经历</h2>
-        <!-- 实习1 -->
-        <article class="intern-item">
-            <div class="intern-header">
-                <div class="intern-company">重庆朝天骏博商业管理有限公司</div>
-                <div class="intern-position">商场引导与激励物资发放专员</div>
-                <div class="intern-time">2022.07.10 - 2022.08.10</div>
+        <!-- 教育背景（最终版：学校+专业同一行居中） -->
+        <section class="section">
+            <h2 class="section-title">教育背景</h2>
+            <div class="edu-item">
+                <div class="edu-info">重庆科技大学 数据科学与大数据技术</div> <!-- 学校+专业同一行 -->
+                <div class="edu-time">2022.09 - 2026.06</div>
             </div>
-            <div class="intern-content">
+            <div>主修课程：</div>
+            <div class="course-list">
+                <span class="course-tag">Hadoop大数据技术</span>
+                <span class="course-tag">分布式数据库原理</span>
+                <span class="course-tag">数据库原理与应用</span>
+                <span class="course-tag">计算机网络B</span>
+                <span class="course-tag">算法与数据结构</span>
+                <span class="course-tag">Python程序开发语言</span>
+            </div>
+        </section>
+
+        <!-- 实习经历 -->
+        <section class="section">
+            <h2 class="section-title">实习经历</h2>
+            <!-- 实习1 -->
+            <article class="intern-item">
+                <div class="intern-header">
+                    <div class="intern-company">重庆朝天骏博商业管理有限公司</div>
+                    <div class="intern-position">商场引导与激励物资发放专员</div>
+                    <div class="intern-time">2022.07.10 - 2022.08.10</div>
+                </div>
+                <div class="intern-content">
+                    <ul>
+                        <li>担当商场引导先锋，每日高效指引超百位行人入场，有效提升商场初始客流量</li>
+                        <li>负责奖品分发工作，精准规划流程，确保每份奖品及时无误地递至获奖者手中</li>
+                    </ul>
+                </div>
+            </article>
+            <!-- 实习2 -->
+            <article class="intern-item">
+                <div class="intern-header">
+                    <div class="intern-company">北京三快在线科技有限公司</div>
+                    <div class="intern-position">美团即时配送专员</div>
+                    <div class="intern-time">2024.07.10 - 2024.08.15</div>
+                </div>
+                <div class="intern-content">
+                    <ul>
+                        <li>借助大数据智能规划，每日精准完成超60单配送，高效履约获商家、顾客称赞</li>
+                        <li>全程把关餐品安全与包装，主动对接商家、顾客，贴心服务满足多样需求</li>
+                        <li>面对恶劣天气、交通高峰，迅速调整策略，全力保障配送工作平稳推进</li>
+                    </ul>
+                </div>
+            </article>
+            <!-- 实习3 -->
+            <article class="intern-item">
+                <div class="intern-header">
+                    <div class="intern-company">砺之教育家教中心</div>
+                    <div class="intern-position">初中辅导家教</div>
+                    <div class="intern-time">2024.11.01 - 至今</div>
+                </div>
+                <div class="intern-content">
+                    <ul>
+                        <li>负责一名初二学生的数学辅导，并对其进行具体知识点的讲解、练习及巩固，使其成绩由100分提高到120分</li>
+                    </ul>
+                </div>
+            </article>
+            <!-- 实习4 -->
+            <article class="intern-item">
+                <div class="intern-header">
+                    <div class="intern-company">北京安捷智合科技有限公司</div>
+                    <div class="intern-position">数据标注员</div>
+                    <div class="intern-time">2025.07.03 - 2025.09.03</div>
+                </div>
+                <div class="intern-content">
+                    <ul>
+                        <li>负责文字、图片团队协作处理批量任务，高效沟通需求，保障项目按时完成</li>
+                        <li>使用专业工具进行数据标注，日均标注超200条，准确率98%以上</li>
+                        <li>严格执行标注标准，自查数据质量，主动反馈问题优化流程</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- 校园经历 -->
+        <section class="other-section">
+            <h2 class="section-title">校园经历</h2>
+            <div class="other-content">
                 <ul>
-                    <li>担当商场引导先锋，每日高效指引超百位行人入场，有效提升商场初始客流量</li>
-                    <li>负责奖品分发工作，精准规划流程，确保每份奖品及时无误地递至获奖者手中</li>
+                    <li><strong>生活委员</strong>：精心采买班级物资，合理安排卫生值日，营造良好环境</li>
+                    <li><strong>团支书</strong>：精心策划团日活动，积极宣传党团知识，有效提升班级思想建设</li>
                 </ul>
             </div>
-        </article>
-        <!-- 实习2 -->
-        <article class="intern-item">
-            <div class="intern-header">
-                <div class="intern-company">北京三快在线科技有限公司</div>
-                <div class="intern-position">美团即时配送专员</div>
-                <div class="intern-time">2024.07.10 - 2024.08.15</div>
-            </div>
-            <div class="intern-content">
+        </section>
+
+        <!-- 技能证书 -->
+        <section class="other-section">
+            <h2 class="section-title">技能证书</h2>
+            <div class="other-content">
                 <ul>
-                    <li>借助大数据智能规划，每日精准完成超60单配送，高效履约获商家、顾客称赞</li>
-                    <li>全程把关餐品安全与包装，主动对接商家、顾客，贴心服务满足多样需求</li>
-                    <li>面对恶劣天气、交通高峰，迅速调整策略，全力保障配送工作平稳推进</li>
+                    <li>全国大学英语四级证书</li>
+                    <li>机动车驾驶证</li>
                 </ul>
             </div>
-        </article>
-        <!-- 实习3 -->
-        <article class="intern-item">
-            <div class="intern-header">
-                <div class="intern-company">砺之教育家教中心</div>
-                <div class="intern-position">初中辅导家教</div>
-                <div class="intern-time">2024.11.01 - 至今</div>
-            </div>
-            <div class="intern-content">
+        </section>
+
+        <!-- 自我评价 -->
+        <section class="other-section">
+            <h2 class="section-title">自我评价</h2>
+            <div class="other-content">
                 <ul>
-                    <li>负责一名初二学生的数学辅导，并对其进行具体知识点的讲解、练习及巩固，使其成绩由100分提高到120分</li>
+                    <li>高自驱，强目标，渴望成功，勇于担当，开朗热情</li>
+                    <li>勤学习，常进取，熟练掌握各类办公软件，适应行业变化需求</li>
+                    <li>严律己，重细节，高标准执行工作任务</li>
                 </ul>
             </div>
-        </article>
-        <!-- 实习4 -->
-        <article class="intern-item">
-            <div class="intern-header">
-                <div class="intern-company">北京安捷智合科技有限公司</div>
-                <div class="intern-position">数据标注员</div>
-                <div class="intern-time">2025.07.03 - 2025.09.03</div>
-            </div>
-            <div class="intern-content">
-                <ul>
-                    <li>负责文字、图片团队协作处理批量任务，高效沟通需求，保障项目按时完成</li>
-                    <li>使用专业工具进行数据标注，日均标注超200条，准确率98%以上</li>
-                    <li>严格执行标注标准，自查数据质量，主动反馈问题优化流程</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
-    <!-- 校园经历 -->
-    <section class="other-section">
-        <h2 class="section-title">校园经历</h2>
-        <div class="other-content">
-            <ul>
-                <li><strong>生活委员</strong>：精心采买班级物资，合理安排卫生值日，营造良好环境</li>
-                <li><strong>团支书</strong>：精心策划团日活动，积极宣传党团知识，有效提升班级思想建设</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 技能证书 -->
-    <section class="other-section">
-        <h2 class="section-title">技能证书</h2>
-        <div class="other-content">
-            <ul>
-                <li>全国大学英语四级证书</li>
-                <li>机动车驾驶证</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 自我评价 -->
-    <section class="other-section">
-        <h2 class="section-title">自我评价</h2>
-        <div class="other-content">
-            <ul>
-                <li>高自驱，强目标，渴望成功，勇于担当，开朗热情</li>
-                <li>勤学习，常进取，熟练掌握各类办公软件，适应行业变化需求</li>
-                <li>严律己，重细节，高标准执行工作任务</li>
-            </ul>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 </body>
 </html>
