@@ -11,170 +11,162 @@
             box-sizing: border-box;
         }
         body {
-            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
-            background-color: #f8f9fa;
+            font-family: "微软雅黑", "PingFang SC", sans-serif;
+            background-color: #f5f5f5;
             color: #333;
-            line-height: 1.8;
-            max-width: 1000px;
+            line-height: 1.7;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 30px;
+            padding: 40px 20px;
         }
-        .resume-container {
+        .resume-wrapper {
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
             padding: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 20px;
-            width: 100%;
+            margin-bottom: 45px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
         }
         .avatar {
-            width: 150px;
-            height: 200px;
-            border-radius: 8px;
+            width: 140px;
+            height: 180px;
+            border-radius: 6px;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #e9f5ff;
+            margin: 0 auto 20px;
+            border: 2px solid #f0f7ff;
         }
-        .name {
-            font-size: 36px;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .basic-info {
-            font-size: 16px;
-            color: #666;
-            line-height: 2;
-        }
-        .section {
-            width: 100%;
-            margin-bottom: 35px;
-        }
-        .section-title {
-            font-size: 22px;
-            color: #007bff;
-            margin-bottom: 15px;
-            padding-left: 12px;
-            border-left: 4px solid #007bff;
+        .fullname {
+            font-size: 32px;
+            color: #222;
+            margin-bottom: 12px;
             font-weight: 600;
         }
-        .content {
-            font-size: 16px;
-            color: #444;
+        .base-info {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 8px;
         }
-        .education, .internship, .campus, .skills, .self-evaluation {
+        .job-want {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 20px;
+            background-color: #e6f4ff;
+            color: #1890ff;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 20px;
+            color: #1890ff;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f7ff;
+            font-weight: 600;
+        }
+        .content-list {
             margin-left: 20px;
         }
-        .internship-item, .campus-item {
-            margin-bottom: 25px;
+        .content-item {
+            margin-bottom: 28px;
         }
         .item-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 8px;
+            align-items: center;
+            margin-bottom: 10px;
             font-weight: 500;
-            color: #2c3e50;
         }
-        .company, .position, .role {
-            font-weight: 600;
+        .item-name {
+            color: #222;
+            font-size: 16px;
         }
-        .date {
-            color: #666;
+        .item-date {
+            color: #888;
+            font-size: 14px;
+        }
+        .item-desc {
+            color: #555;
             font-size: 15px;
+            line-height: 1.8;
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .course-tag {
+            padding: 5px 14px;
+            background-color: #f5fafe;
+            color: #1890ff;
+            border-radius: 16px;
+            font-size: 14px;
         }
         ul {
             list-style-type: disc;
             margin-left: 30px;
         }
-        .course-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .course-item {
-            background-color: #e9f5ff;
-            padding: 6px 12px;
-            border-radius: 20px;
-            color: #007bff;
-            font-size: 15px;
-        }
-        .contact-info {
-            margin-top: 15px;
-            font-size: 16px;
-            color: #555;
-        }
-        .job-intention {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 18px;
-            margin-top: 15px;
+        li {
+            margin-bottom: 8px;
         }
         @media (max-width: 768px) {
-            .resume-container {
-                padding: 25px;
+            .resume-wrapper {
+                padding: 30px 15px;
             }
-            .name {
+            .fullname {
                 font-size: 28px;
             }
             .section-title {
-                font-size: 20px;
+                font-size: 18px;
             }
             .item-header {
                 flex-direction: column;
+                align-items: flex-start;
                 gap: 5px;
             }
-            .course-list {
+            .course-container {
                 gap: 10px;
-            }
-            .avatar {
-                width: 120px;
-                height: 160px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="resume-container">
-        <!-- 头部信息（含图片） -->
+    <div class="resume-wrapper">
+        <!-- 头部信息 -->
         <div class="header">
             <img src="ymy.jpg" alt="易梦园个人照片" class="avatar">
-            <div class="name">易梦园</div>
-            <div class="basic-info">
-                出生年月：2003年8月 | 手机：13110235632 | 邮箱：2640414241@qq.com
-            </div>
-            <div class="contact-info">
-                备用邮箱：yalone320@gmail.com
-            </div>
-            <div class="job-intention">求职意向：数据分析师</div>
+            <div class="fullname">易梦园</div>
+            <div class="base-info">出生年月：2003年8月 | 手机：13110235632</div>
+            <div class="base-info">邮箱：2640414241@qq.com | 备用邮箱：226418717003782@139.com</div>
+            <div class="job-want">求职意向：数据分析师</div>
         </div>
 
         <!-- 教育背景 -->
         <div class="section">
             <div class="section-title">教育背景</div>
-            <div class="content education">
+            <div class="content-item">
                 <div class="item-header">
-                    <span class="school">重庆科技大学 | 数据科学与大数据技术</span>
-                    <span class="date">2022.09 - 2026.06</span>
+                    <div class="item-name">重庆科技大学 | 数据科学与大数据技术</div>
+                    <div class="item-date">2022.09 - 2026.06</div>
                 </div>
-                <div class="course-title" style="margin: 10px 0; font-weight: 500;">主修课程：</div>
-                <div class="course-list">
-                    <div class="course-item">Hadoop大数据技术</div>
-                    <div class="course-item">分布式数据库原理</div>
-                    <div class="course-item">数据库原理与应用</div>
-                    <div class="course-item">计算机网络B</div>
-                    <div class="course-item">算法与数据结构</div>
-                    <div class="course-item">Python程序开发语言</div>
+                <div class="item-desc">
+                    <div>主修课程：</div>
+                    <div class="course-container">
+                        <div class="course-tag">Hadoop大数据技术</div>
+                        <div class="course-tag">分布式数据库原理</div>
+                        <div class="course-tag">数据库原理与应用</div>
+                        <div class="course-tag">计算机网络B</div>
+                        <div class="course-tag">算法与数据结构</div>
+                        <div class="course-tag">Python程序开发语言</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,48 +174,44 @@
         <!-- 实习经历 -->
         <div class="section">
             <div class="section-title">实习经历</div>
-            <div class="content internship">
-                <!-- 实习1 -->
-                <div class="internship-item">
+            <div class="content-list">
+                <div class="content-item">
                     <div class="item-header">
-                        <span><span class="company">北京安捷智合科技有限公司</span> | <span class="position">数据标注员</span></span>
-                        <span class="date">2025.07.03 - 2025.09.03</span>
+                        <div class="item-name">北京安捷智合科技有限公司 | 数据标注员</div>
+                        <div class="item-date">2025.07.03 - 2025.09.03</div>
                     </div>
-                    <ul>
+                    <ul class="item-desc">
                         <li>参与文字、图片数据的团队协作处理，高效沟通需求，保障批量任务按时完成</li>
                         <li>使用专业工具进行数据标注，日均标注超200条，准确率达98%以上</li>
                         <li>严格执行标注标准，自查数据质量，主动反馈问题并优化工作流程</li>
                     </ul>
                 </div>
-                <!-- 实习2 -->
-                <div class="internship-item">
+                <div class="content-item">
                     <div class="item-header">
-                        <span><span class="company">砺之教育家教中心</span> | <span class="position">初中辅导家教</span></span>
-                        <span class="date">2024.11.01 - 至今</span>
+                        <div class="item-name">砺之教育家教中心 | 初中辅导家教</div>
+                        <div class="item-date">2024.11.01 - 至今</div>
                     </div>
-                    <ul>
+                    <ul class="item-desc">
                         <li>负责一名初二学生的数学辅导，针对性讲解知识点、组织练习并巩固，助力学生成绩从100分提升至120分</li>
                     </ul>
                 </div>
-                <!-- 实习3 -->
-                <div class="internship-item">
+                <div class="content-item">
                     <div class="item-header">
-                        <span><span class="company">北京三快在线科技有限公司</span> | <span class="position">美团即时配送专员</span></span>
-                        <span class="date">2024.07.10 - 2024.08.15</span>
+                        <div class="item-name">北京三快在线科技有限公司 | 美团即时配送专员</div>
+                        <div class="item-date">2024.07.10 - 2024.08.15</div>
                     </div>
-                    <ul>
+                    <ul class="item-desc">
                         <li>借助大数据智能规划配送路线，每日精准完成超60单配送，高效履约获得商家与顾客称赞</li>
                         <li>全程把控餐品安全与包装完整性，主动对接商家与顾客，以贴心服务满足多样化需求</li>
                         <li>面对恶劣天气、交通高峰等突发情况，迅速调整配送策略，保障配送工作平稳推进</li>
                     </ul>
                 </div>
-                <!-- 实习4 -->
-                <div class="internship-item">
+                <div class="content-item">
                     <div class="item-header">
-                        <span><span class="company">重庆朝天骏博商业管理有限公司</span> | <span class="position">商场引导与激励物资发放专员</span></span>
-                        <span class="date">2022.07.10 - 2022.08.10</span>
+                        <div class="item-name">重庆朝天骏博商业管理有限公司 | 商场引导与激励物资发放专员</div>
+                        <div class="item-date">2022.07.10 - 2022.08.10</div>
                     </div>
-                    <ul>
+                    <ul class="item-desc">
                         <li>担当商场引导先锋，每日高效指引超百位行人入场，有效提升商场初始客流量</li>
                         <li>负责奖品分发工作，精准规划发放流程，确保每份奖品及时无误递至获奖者手中</li>
                     </ul>
@@ -234,52 +222,31 @@
         <!-- 校园经历 -->
         <div class="section">
             <div class="section-title">校园经历</div>
-            <div class="content campus">
-                <div class="campus-item">
-                    <div class="item-header">
-                        <span class="role">团支书</span>
-                    </div>
-                    <ul>
-                        <li>精心策划团日活动，丰富班级文化生活</li>
-                        <li>积极宣传党团知识，有效提升班级思想建设水平</li>
-                    </ul>
-                </div>
-                <div class="campus-item">
-                    <div class="item-header">
-                        <span class="role">生活委员</span>
-                    </div>
-                    <ul>
-                        <li>精心采买班级物资，合理控制开支，保障班级日常需求</li>
-                        <li>科学安排卫生值日，营造整洁舒适的班级环境</li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="content-list item-desc">
+                <li><strong>团支书</strong>：精心策划团日活动，积极宣传党团知识，有效提升班级思想建设</li>
+                <li><strong>生活委员</strong>：精心采买班级物资，合理安排卫生值日，营造良好班级环境</li>
+            </ul>
         </div>
 
         <!-- 技能证书 -->
         <div class="section">
             <div class="section-title">技能证书</div>
-            <div class="content skills">
-                <ul>
-                    <li>全国大学英语四级证书</li>
-                    <li>机动车驾驶证</li>
-                    <li>熟练掌握各类办公软件，具备数据处理相关技能</li>
-                </ul>
-            </div>
+            <ul class="content-list item-desc">
+                <li>全国大学英语四级证书</li>
+                <li>机动车驾驶证</li>
+                <li>熟练掌握各类办公软件，具备数据处理相关技能</li>
+            </ul>
         </div>
 
         <!-- 自我评价 -->
         <div class="section">
             <div class="section-title">自我评价</div>
-            <div class="content self-evaluation">
-                <ul>
-                    <li>高自驱、强目标感，渴望成功，勇于担当，性格开朗热情，具备良好的沟通协作能力</li>
-                    <li>勤学善思、积极进取，熟练掌握各类办公软件，能够快速适应行业变化与工作需求</li>
-                    <li>严于律己、注重细节，以高标准执行各项工作任务，具备较强的责任心与执行力</li>
-                </ul>
-            </div>
+            <ul class="content-list item-desc">
+                <li>高自驱、强目标感，渴望成功，勇于担当，性格开朗热情，具备良好沟通协作能力</li>
+                <li>勤学善思、积极进取，熟练掌握各类办公软件，能快速适应行业变化与工作需求</li>
+                <li>严于律己、注重细节，以高标准执行各项工作任务，具备较强的责任心与执行力</li>
+            </ul>
         </div>
     </div>
 </body>
 </html>
-
