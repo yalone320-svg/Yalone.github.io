@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color: red;
+            text-align: center;
+        }
+        p {
+            font-size: 20px;
+        }
+        p{
+            font-family: "方正楷体_GBK",sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            text-indent: 2em;
+        }
+        h2{
+            color: cornflowerblue;
+            font-family: 方正楷体_GBK,sans-serif;
+            margin: 25px 0 15px 0;
+        }
+        .content-box {
+            border: 2px solid #6495ed;
+            background-color: white;
+            padding: 20px;
+            margin: 0 0 25px 0;
+            border-radius: 8px;
+        }
+        ul{
+            font-family: "方正楷体_GBK",sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        ol{
+            font-family: "方正楷体_GBK",sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: whitesmoke;
+        }
+        a{
+            color:mediumpurple;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: palevioletred;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 方正楷体_GBK,sans-serif;
+        }
+        th{
+            background-color: lightcyan;
+            color: black;
+            font-family: 方正楷体_GBK,sans-serif;
+            padding:16px;
+        }
+        td{
+            padding : 16px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+        tr:hover{
+            background-color: palevioletred;
+        }
+        form input, form textarea {
+            padding: 8px 10px;
+            margin: 5px 0;
+            font-family: "方正楷体_GBK",sans-serif;
+            font-size: 16px;
+        }
+        form button {
+            padding: 10px 25px;
+            background-color: mediumpurple;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "方正楷体_GBK",sans-serif;
+            font-size: 16px;
+        }
+        form button:hover {
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+<h1>欢迎来到ikun的个人主页</h1>
+<hr>
+<h2 class="a">关于我</h2>
+<img src="ikun.jpg" alt="ikun头像" width="250px" >
+<p>大家好！我叫<strong>ikun</strong>，今年2.5岁。</p>
+<p>我喜欢唱，跳，rap，篮球</p>
+
+<h2 class="b">我的技能</h2>
+<div class="content-box">
+    <ul>
+        <li>唱歌</li>
+        <li>跳舞</li>
+        <li>说唱</li>
+        <li>打篮球</li>
+    </ul>
+</div>
+
+<h2 class="b">我的学习计划</h2>
+<div class="content-box">
+    <ol>
+        <li>每周练习 2 次唱歌（主打流行曲风）</li>
+        <li>学习基础街舞动作，每天练 15 分钟</li>
+        <li>跟着教学视频练习 rap 节奏，每周写 1 段简单歌词</li>
+        <li>每周打 1 次篮球，练习运球和投篮基础动作</li>
+    </ol>
+</div>
+
+<h2 class="b">我喜欢的网站</h2>
+<div class="content-box">
+    <p>以下是一些我经常访问的网站：</p>
+    <ul>
+        <li><a href="https://www.baidu.com"> 百度 </a> - 搜索引擎</li>
+        <li><a href="https://www.bilibili.com"> 哔哩哔哩 </a> - 学习视频</li>
+        <li><a href="https://www.douyin.com/search/dy"> 抖音 </a> - 冲浪</li>
+    </ul>
+</div>
+
+<h2 class="b">联系我</h2>
+<table border="1">
+    <tr>
+        <th>联系方式</th>
+        <th>内容</th>
+    </tr>
+    <tr>
+        <td>邮箱</td>
+        <td>ikun@iiikun.com</td>
+    </tr>
+    <tr>
+        <td>电话</td>
+        <td>138-0000-0000</td>
+    </tr>
+    <tr>
+        <td>地址</td>
+        <td>中国ikun市</td>
+    </tr>
+</table>
+
+<h2 class="b">给我留言</h2>
+<div class="content-box">
+    <form>
+        <p>
+            <label>姓名：</label>
+            <input type="text">
+        </p>
+        <p>
+            <label>联系方式：</label>
+            <input type="password">
+        </p>
+        <p>
+            <label>留言内容</label>
+            <input type="text">
+        </p>
+        <p>
+            <button type="submit">提交留言</button>
+        </p>
+    </form>
+</div>
+</body>
+</html>
